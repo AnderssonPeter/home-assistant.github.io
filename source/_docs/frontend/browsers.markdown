@@ -19,7 +19,7 @@ We would appreciate if you help to keep this page up-to-date and add feedback.
 | Browser                   | Release        | State      | Comments                 |
 | :------------------------ |:---------------|:-----------|:-------------------------|
 | Internet Explorer ([IE])  | 11             | Not supported | Does not support promises. |
-| Microsoft [Edge]          | deli. Win 10   | works | Streaming updates not working. |
+| Microsoft [Edge]          | deli. Win 10   | works | Streaming updates not working, configuration view not working. |
 | [Chrome]                  | 50.0.2661.102  | works      |                          |
 | [Firefox]                 | 43.0.1         | works      |                          |
 | [Iridium]                 | 48.2           | works      |                          |
