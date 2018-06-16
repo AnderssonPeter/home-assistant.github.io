@@ -123,6 +123,32 @@ sensor:
 ```
 {% endraw %}
 
+### {% linkable_title JSON template attributes configuration %}
+
+The example sensor below shows a configuration example which uses JSON template attributes to convert from `PascalCase` to `snake_case`. {% endraw %}.
+
+{% raw %}
+```yaml
+# Example configuration.yaml entry
+sensor:
+  - platform: mqtt
+    name: "BS RSSI"
+    state_topic: "HUISHS/BunnyShed/NodeHealthJSON"
+    unit_of_measurement: 'dBm'
+    value_template: "{{ value_json.RSSI }}"
+    availability_topic: "HUISHS/BunnyShed/status"
+    payload_available: "online"
+    payload_not_available: "offline"
+    json_template_attributes:
+      client_name: "{{ value_json.ClientName }}"
+      ip: "{{ value_json.IP }}"
+      mac: "{{ value_json.MAC }}"
+      rssi: "{{ value_json.RSSI }}"
+      host_name: "{{ value_json.HostName }}"
+      connected_ssid: "{{ value_json.ConnectedSSID }}"  
+```
+{% endraw %}
+
 ### {% linkable_title Get battery level %}
 
 If you are using the [OwnTracks](/components/device_tracker.owntracks/) and enable the reporting of the battery level then you can use a MQTT sensor to keep track of your battery. A regular MQTT message from OwnTracks looks like this: 
